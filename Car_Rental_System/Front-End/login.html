@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <title>Login From</title>
@@ -19,6 +19,7 @@
 </head>
     <script src="https://kit.fontawesome.com/be43d1e0c7.js" crossorigin="anonymous"></script>
 <body class="img js-fullheight" style="background-image: url(assets/img/2.jpg);">
+
 <!--log in-->
 
 <section class="ftco-section">
@@ -32,15 +33,18 @@
             <div class="col-md-6 col-lg-4">
                 <div class="login-wrap p-0">
                     <h3 class="mb-4 text-center">Have an account?</h3>
-                    <form action="#" class="signin-form">
+                    <form action="#" class="signin-form" id="loginForm">
+                        <input class="form-control" id="txtLogId" name="logId" type="text" hidden>
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Username" required>
+                            <input type="text" id="txtUserName" class="form-control" placeholder="Username" required>
+                            <p><small class="text-danger" id="userNameError"></small></p>
                         </div>
 
                         <div class="form-group">
-                            <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+                            <input id="txtPassword" type="password" class="form-control" placeholder="Password" required>
                             <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                            <p><small class="text-danger" id="passwordError"></small></p>
                         </div>
 
                         <div class="form-group">
@@ -54,7 +58,7 @@
                         </div>
 
                         <div class="form-group" >
-                            <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                            <button id="btnLogin" type="button" class="form-control btn btn-primary submit px-3" disabled>Sign In</button>
                         </div>
 
                         <div class="form-group d-md-flex">
@@ -72,14 +76,131 @@
 
                     <p class="w-100 text-center">&mdash; Or Sign Up With &mdash;</p>
 
-                    <div class="social d-flex text-center">
-                        <a href="#" class="px-2 py-2 mr-md-1 rounded"> Create New Account</a>
-                        <a href="#" class="px-2 py-2 ml-md-1 rounded"> Home</a>
+                    <div class="social  text-center" style="padding-right: 10px;">
+                        <button style="background: transparent; border: none" > <a id="btnSignup" href="#" class="px-4 py-2 mr-md-0 rounded"  data-bs-toggle="modal"
+                                                                                   data-bs-target="#signUpModal"> Create New Account</a> </button>
+                        <button style="background: transparent; border: none"> <a href="index.html" class="px-4 py-2 ml-md-0 rounded" type="button" > Home</a> </button>
                     </div>
+
+
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+<!--sign up-->
+<div class="modal fade" id="signUpModal" tabindex="-1" role="dialog"
+     aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content" style="background-color: #0b093e">
+            <div class="modal-header">
+                <h3 class="modal-title text-primary" id="exampleModalLongTitle">Sign Up</h3>
+                <div class="form-row align-content-end">
+                    <input type="text" class="form-control" id="txtId" hidden name="id">
+                </div>
+                <button aria-label="Close" class="btn-close" data-bs-dismiss="modal" type="button"></button>
+            </div>
+
+            <div class="modal-body">
+                <form>
+
+                    <div class="row m-0 mt-1 mb-3" >
+                        <label for="inputUserType">User Type</label>
+                        <select  name="userType" id="inputUserType">
+                            <option value="-Select User Type-">-Select User Type-</option>
+                            <option value="Admin">Admin</option>
+                            <option value="Customer">Customer</option>
+                        </select>
+                    </div>
+
+                    <div class="row mb-3">
+
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Name</label>
+                            <input type="text" class="form-control" id="inputName"
+                                   placeholder="Kasun Weerasinghe" required disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputContactNo">Contact No</label>
+                            <input type="text" class="form-control"
+                                   id="inputContactNo"
+                                   placeholder="0777123456" required disabled>
+                        </div>
+                    </div>
+                    <div class="row m-0 mb-3">
+                        <label for="inputAddress">Address</label>
+                        <input type="text" class="form-control" id="inputAddress"
+                               placeholder="Galle road, Colombo" required disabled>
+                    </div>
+
+                    <div class="row m-0 mt-1 mb-3">
+                        <label for="inputEmail">Email</label>
+                        <input type="email" class="form-control" id="inputEmail"
+                               placeholder="kasun@gmail.com"
+                               required disabled>
+                    </div>
+
+                    <div class="row mb-3">
+                        <div class="form-group col-md-6">
+                            <label for="inputDrivingLicence">Driving Licence No</label>
+                            <input type="text" class="form-control"
+                                   id="inputDrivingLicence"
+                                   placeholder="B1234567" required disabled>
+                        </div>
+
+                        <div class="form-group col-md-6">
+                            <label for="inputNIC">NIC No</label>
+                            <input type="text" class="form-control" id="inputNIC"
+                                   placeholder="981234567V" required disabled>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="form-group col-md-6">
+                            <label for="inputUserName">Username</label>
+                            <input type="text" class="form-control" id="inputUserName"
+                                   placeholder="kasun98" required disabled>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword">Password</label>
+                            <input type="password" class="form-control"
+                                   id="inputPassword"
+                                   placeholder="" required disabled>
+                        </div>
+                    </div>
+                    <div class="input-group col-md-15 mb-3">
+                        <label for="inputfile1">Upload NIC (Front)</label>
+                        <input class="form-control w-100" id="inputfile1" type="file" required disabled>
+                    </div>
+
+                    <div class="input-group col-md-15 mb-3">
+                        <label for="inputfile2">Upload NIC (Back)</label>
+                        <input class="form-control w-100" id="inputfile2" type="file" required disabled>
+                    </div>
+                    <div class="input-group col-md-15 mb-3">
+                        <label for="inputfile3">Upload Driving Licence</label>
+                        <input class="form-control w-100" id="inputfile3" type="file" required disabled>
+                    </div>
+
+                    <div class="modal-footer">
+                        <div style="width: 100%; text-align: center">
+                            <button type="button" class="btn btn-outline-success"
+                                    id="btnCreate">Create Account
+                            </button>
+                            <button type="button" class="btn btn-outline-primary"
+                                    id="btnClear">Clear
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap/js/jquery-3.6.1.min.js"></script>
+
 </body>
 </html>
