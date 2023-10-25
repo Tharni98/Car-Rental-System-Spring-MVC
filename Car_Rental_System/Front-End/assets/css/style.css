@@ -18,15 +18,16 @@ html body{
     height: 60px;
     box-shadow:0 4px 10px -3px rgba(183, 174, 174, 0.34) ;
     /*position: relative;*/
-    /*background: #0e1f66;*/
-    background: #419197;
+    background: #0e1f66;
+    /*background: #419197;*/
 }
 
 .navbar{
     height: 60px;
     /*background: rgba(189, 0, 0, 0.8) top;*/
     box-shadow: 0 4px 10px -3px rgba(183, 174, 174, 0.34);
-    background: #419197;
+    /*background: #419197;*/
+    background: #0e1f66;
     overflow: hidden;
 }
 
