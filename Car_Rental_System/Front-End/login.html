@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login From</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="icon" href="assets/img/topLogo.webp">
+    <link rel="stylesheet" href="assets/bootstrap/css/style.css">
+
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://kit.fontawesome.com/be43d1e0c7.js" crossorigin="anonymous"></script>
+</head>
+    <script src="https://kit.fontawesome.com/be43d1e0c7.js" crossorigin="anonymous"></script>
+<body class="img js-fullheight" style="background-image: url(assets/img/2.jpg);">
+<!--log in-->
+
+<section class="ftco-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center mb-5">
+                <h2 class="heading-section">Easy Car Rental</h2>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <div class="login-wrap p-0">
+                    <h3 class="mb-4 text-center">Have an account?</h3>
+                    <form action="#" class="signin-form">
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Username" required>
+                        </div>
+
+                        <div class="form-group">
+                            <input id="password-field" type="password" class="form-control" placeholder="Password" required>
+                            <span toggle="#password-field" class="fa fa-fw fa-eye field-icon toggle-password"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <!--              <label for="cmbUserType" class="form-label fw-bold mb-0">User Type</label>-->
+                            <select class="form-control  text-opacity-50 text-black" name="userType" id="cmbUserType" >
+                                <option  value="-select-" style="color: #1f1915; !important">-Select User Type-</option>
+                                <option value="Admin" style="color: #1f1915; !important">Admin</option>
+                                <option value="Driver" style="color: #1f1915; !important">Driver</option>
+                                <option value="Customer" style="color: #1f1915; !important">Customer</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group" >
+                            <button type="submit" class="form-control btn btn-primary submit px-3">Sign In</button>
+                        </div>
+
+                        <div class="form-group d-md-flex">
+                            <div class="w-50">
+                                <label class="checkbox-wrap checkbox-primary">Remember Me
+                                    <input type="checkbox" checked>
+                                    <span class="checkmark"></span>
+                                </label>
+                            </div>
+                            <div class="w-50 text-md-right">
+                                <a href="#" style="color: #fff">Forgot Password</a>
+                            </div>
+                        </div>
+                    </form>
+
+                    <p class="w-100 text-center">&mdash; Or Sign Up With &mdash;</p>
+
+                    <div class="social d-flex text-center">
+                        <a href="#" class="px-2 py-2 mr-md-1 rounded"> Create New Account</a>
+                        <a href="#" class="px-2 py-2 ml-md-1 rounded"> Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>
+</html>
