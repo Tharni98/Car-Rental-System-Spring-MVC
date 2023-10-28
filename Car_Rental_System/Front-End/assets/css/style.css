@@ -2,6 +2,13 @@ html{
     scroll-behavior: smooth;
 }
 
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #085185;
+}
 
 html body{
     overflow-x: hidden;
@@ -62,4 +69,25 @@ html body{
 .navbar li .nav-link:hover{
     color: red;
     text-decoration: underline;
+}
+
+#digitalClock {
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    color: white;
+}
+
+.Schedule{
+    font-weight: bold;
+}
+
+.sticky {
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.sticky + main {
+    padding-top: 60px;
 }
