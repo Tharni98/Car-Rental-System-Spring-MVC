@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/css/normalize.css">
+  <link rel="stylesheet" href="assets/fontAwesome/css/all.min.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <link rel="icon" href="assets/img/topLogo.webp">
+
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+  <link href="assets/alertjs/alertify.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.css" rel="stylesheet"/>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.5.0/mdb.min.js"></script>
+  <script src="assets/alertjs/alertify.min.js"></script>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://kit.fontawesome.com/be43d1e0c7.js" crossorigin="anonymous"></script>
+</head>
+  <script src="https://kit.fontawesome.com/be43d1e0c7.js" crossorigin="anonymous"></script>
+
+<body  onscroll="scrollFunction()">
+<!--Header Section-->
+<header id="header" class="d-flex justify-content-center ">
+  <section class="container-fluid  align-items-center" style=" z-index: 999;padding: 0" id="navSection">
+    <nav class="navbar navbar-expand-lg navbar-light d-flex ">
+      <div class="container-fluid  row">
+        <div class="collapse navbar-collapse  col-md-6"
+             id="navbarNavDropdown">
+          <ul class="nav  ">
+            <li class="nav-item "><a class="nav-link " aria-current="page" href="index.html"><i
+                    class="fas fa-home fa-2x" style="position: absolute"></i></a></li>
+            <li class="nav-item"><a class="nav-link " aria-current="page" href="#"
+                                    style="font-family: 'Dancing Script SemiBold';text-decoration: none">Admin</a>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6 collapse navbar-collapse align-items-center justify-content-end">
+          <div id="digitalClock"></div>
+        </div>
+      </div>
+    </nav>
+  </section>
+</header>
+
+<!--Main Section-->
+<main class="adminContent container-fluid">
+  <div class="row">
+    <!--Side Links-->
+    <div class="col-2" id="leftDash">
+      <div class="nav flex-column nav-tabs text-center overflow-hidden" id="v-tabs-tab" role="tablist"
+           aria-orientation="vertical">
+        <a class="nav-link active" id="v-tabs-dash-tab" data-mdb-toggle="tab" href="#v-tabs-dash" role="tab"
+           aria-controls="v-tabs-dash" aria-selected="true">
+          <i class="fas fa-home"></i> Dashboard</a>
+        <a class="nav-link" id="v-tabs-car-tab" data-mdb-toggle="tab" href="#v-tabs-car" role="tab"
+           aria-controls="v-tabs-car" aria-selected="false">
+          <i class="fas fa-car"></i> Cars</a>
+        <a class="nav-link" id="v-tabs-customer-tab" data-mdb-toggle="tab" href="#v-tabs-customer" role="tab"
+           aria-controls="v-tabs-customer" aria-selected="false">
+          <i class="fas fa-user"></i> Customers</a>
+        <a class="nav-link" id="v-tabs-driver-tab" data-mdb-toggle="tab" href="#v-tabs-driver" role="tab"
+           aria-controls="v-tabs-driver" aria-selected="false">
+          <i class="fas fa-user"></i> Drivers</a>
+        <a class="nav-link" id="v-tabs-rentals-tab" data-mdb-toggle="tab" href="#v-tabs-rentals" role="tab"
+           aria-controls="v-tabs-rentals" aria-selected="false" id="adminOrdTab">
+          <i class="fas fa-list-ul"></i> Car Rentals</a>
+        <a class="nav-link" id="v-tabs-payment-tab" data-mdb-toggle="tab" href="#v-tabs-payment" role="tab"
+           aria-controls="v-tabs-payment" aria-selected="false">
+          <i class="fas fa-money-bill-wave"></i> Payments</a>
+        <a class="nav-link" id="v-tabs-request-tab" data-mdb-toggle="tab" href="#v-tabs-request" role="tab"
+           aria-controls="v-tabs-request" aria-selected="false">
+          <i class="fas fa-archive"></i> Requests</a>
+        <a class="nav-link" id="v-tabs-rentalreturns-tab" data-mdb-toggle="tab" href="#v-tabs-rentalreturns"
+           role="tab"
+           aria-controls="v-tabs-rentalreturns" aria-selected="false">
+          <i class="fas fa-file-invoice-dollar"></i> Rental Returns</a>
+        <a class="nav-link" id="v-tabs-maintenance-tab" data-mdb-toggle="tab" href="#v-tabs-maintenance"
+           role="tab"
+           aria-controls="v-tabs-maintenance" aria-selected="false">
+          <i class="fas fa-tools"></i> Maintenance</a>
+        <a class="nav-link" id="v-tabs-income-tab" data-mdb-toggle="tab" href="#v-tabs-income"
+           role="tab"
+           aria-controls="v-tabs-income" aria-selected="false">
+          <i class="fas fa-chart-line"></i> Income Reports</a>
+      </div>
+    </div>
+
+    <div class="col-10 p-3">
+      <div class="container-fluid">
+        <div class="tab-content" id="v-tabs-tabContent">
+          <!--Dashboard Details-->
+          <div class="tab-pane fade show active" id="v-tabs-dash" role="tabpanel" aria-labelledby="v-tabs-dash-tab">
+            <div class="row text-center"><h1 class="h1 display-5">DashBoard</h1></div>
+          </div>
+          <!--Car Details-->
+          <div class="tab-pane fade" id="v-tabs-car" role="tabpanel" aria-labelledby="v-tabs-car-tab">
+          </div>
+          <!--Customer Details-->
+          <div class="tab-pane fade" id="v-tabs-customer" role="tabpanel" aria-labelledby="v-tabs-customer-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Customer Details</h1></div>
+            <!--Customer Details Content-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 bg-info text-white">Customer Details</h3>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerId" class="form-label mb-0">Customer ID</label>
+                  <input type="text" class="form-control" id="txtCustomerId" name="customerId"
+                         disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerName" class="form-label mb-0">Customer Name</label>
+                  <input type="text" class="form-control" id="txtCustomerName" name="customerName"
+                         disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerAddress" class="form-label mb-0">Customer Address</label>
+                  <input type="text" class="form-control" id="txtCustomerAddress"
+                         name="customerAddress" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerContactNo" class="form-label mb-0">Customer Contact</label>
+                  <input type="text" class="form-control" id="txtCustomerContactNo"
+                         name="customerContactNo" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerEmail" class="form-label mb-0">Customer Email</label>
+                  <input type="text" class="form-control" id="txtCustomerEmail" name="customerEmail"
+                         disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerNICNo" class="form-label mb-0">Customer NIC No</label>
+                  <input type="text" class="form-control" id="txtCustomerNICNo" name="customerNICNo"
+                         disabled>
+                </div>
+              </div>
+            </div>
+            <!--Second Row-->
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCustomerLicenceNo" class="form-label mb-0">Customer Licence
+                    No</label>
+                  <input type="text" class="form-control" id="txtCustomerLicenceNo"
+                         name="customerLicenceNo" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <label class="form-label mb-0">NIC Front View</label>
+                <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #00e5ff 2px solid">
+                </div>
+              </div>
+              <div class="col-2">
+                <label class="form-label mb-0">NIC Back View</label>
+                <div class="mb-3" id="divNICBackView" style="height: 13vh; border: #00e5ff 2px solid">
+                </div>
+              </div>
+              <div class="col-2">
+                <label class="form-label mb-0">Licence Img</label>
+                <div class="mb-3" id="divLicenceImg" style="height: 13vh; border: #00e5ff 2px solid">
+                </div>
+              </div>
+              <div class="col-4">
+                <button type="button" class="btn btn-success mt-3" id="btnAcceptCustomer">Accept
+                </button>
+                <button type="button" class="btn btn-danger mt-3" id="btnRejectCustomer">Reject</button>
+                <button type="button" class="btn btn-secondary mt-3" id="btnClearFields">Clear</button>
+              </div>
+            </div>
+          </div>
+          <!--Driver Details-->
+          <div class="tab-pane fade" id="v-tabs-driver"  role="tabpanel" aria-labelledby="v-tabs-customer-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Driver Details</h1></div>
+            <!--Driver Details-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 bg-info text-white">Driver Details</h3>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtLicenceNo" class="form-label mb-0">Licence No</label>
+                  <input type="text" class="form-control" id="txtLicenceNo" name="licenceNo"
+                         placeholder="Eg:- B1234567">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtDriverName" class="form-label mb-0">Name</label>
+                  <input type="text" class="form-control" id="txtDriverName" name="driverName"
+                         placeholder="Eg:- Tharani Harshika">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtDriverAddress" class="form-label mb-0">Address</label>
+                  <input type="text" class="form-control" id="txtDriverAddress" name="driverAddress"
+                         placeholder="Eg:- Galle Road,Ambalangoda">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtDriverContactNo" class="form-label mb-0">Contact No</label>
+                  <input type="text" class="form-control" id="txtDriverContactNo"
+                         name="driverContactNo" placeholder="Eg:- 0764658101">
+                </div>
+              </div>
+            </div>
+            <!--Second Row-->
+            <div class="row ms-0 me-0">
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtDriverNICNo" class="form-label mb-0">NIC No</label>
+                  <input type="text" class="form-control" id="txtDriverNICNo" name="driverNICNo"
+                         placeholder="Eg:- 986560564V">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtDriverUserName" class="form-label mb-0">Username</label>
+                  <input type="text" class="form-control" id="txtDriverUserName"
+                         name="driverUsername">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtDriverPassword" class="form-label mb-0">Password</label>
+                  <input type="password" class="form-control" id="txtDriverPassword"
+                         name="driverUsername">
+                </div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-success mt-3 " id="btnSaveDriver">Save</button>
+                <button type="button" class="btn btn-danger mt-3" id="btnDeleteDriver">Delete</button>
+                <button type="button" class="btn btn-warning mt-3" id="btnUpdateDriver">Update</button>
+                <button type="button" class="btn btn-secondary mt-3" id="btnClearDriver">Clear</button>
+              </div>
+            </div>
+          </div>
+          <!--Car Rentals-->
+          <div class="tab-pane fade" id="v-tabs-rentals" role="tabpanel" aria-labelledby="v-tabs-rentals-tab">
+          </div>
+          <!--Payment Details-->
+          <div class="tab-pane fade" id="v-tabs-payment" role="tabpanel" aria-labelledby="v-tabs-payment-tab">
+          </div>
+          <!--Rental Requests-->
+          <div class="tab-pane fade" id="v-tabs-request" role="tabpanel" aria-labelledby="v-tabs-request-tab">
+          </div>
+          <!--Rental Return-->
+          <div class="tab-pane fade" id="v-tabs-rentalreturns" role="tabpanel"
+               aria-labelledby="v-tabs-rentalreturns-tab">
+          </div>
+          <!--Maintenance-->
+          <div class="tab-pane fade" id="v-tabs-maintenance" role="tabpanel" aria-labelledby="v-tabs-maintenance-tab">
+          </div>
+          <!--Income Reports-->
+          <div class="tab-pane fade" id="v-tabs-income" role="tabpanel" aria-labelledby="v-tabs-income-tab">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<script src="assets/bootstrap/js/jquery-3.6.1.min.js"></script>
+<script src="assets/Sweet%20Alert/sweetalert.min.js"></script>
+
+<script>
+  var navbar = document.getElementById("navSection");
+  var sticky = navbar.offsetTop;
+  function scrollFunction() {
+    if (window.pageYOffset >= sticky) {
+      console.log(sticky + 'in');
+      navbar.classList.add('sticky');
+    } else {
+      navbar.classList.remove('sticky');
+      console.log(sticky);
+    }
+  }
+  function Time() {
+    var date = new Date();
+    var hour = date.getHours();
+    var minute = date.getMinutes();
+    var second = date.getSeconds();
+    var period = "";
+    if (hour >= 12) {
+      period = "PM";
+    } else {
+      period = "AM";
+    }
+    if (hour == 0) {
+      hour = 12;
+    } else {
+      if (hour > 12) {
+        hour = hour - 12;
+      }
+    }
+    hour = update(hour);
+    minute = update(minute);
+    second = update(second);
+    document.getElementById("digitalClock").innerText = hour + " : " + minute + " : " + second + " " + period;
+    setTimeout(Time, 1000);
+  }
+  function update(t) {
+    if (t < 10) {
+      return "0" + t;
+    } else {
+      return t;
+    }
+  }
+  Time();
+</script>
+
+</body>
+</html>
