@@ -55,9 +55,12 @@
 
 <!--Main Section-->
 <main class="adminContent container-fluid">
+
   <div class="row">
+
     <!--Side Links-->
     <div class="col-2" id="leftDash">
+
       <div class="nav flex-column nav-tabs text-center overflow-hidden" id="v-tabs-tab" role="tablist"
            aria-orientation="vertical">
         <a class="nav-link active" id="v-tabs-dash-tab" data-mdb-toggle="tab" href="#v-tabs-dash" role="tab"
@@ -94,24 +97,232 @@
            aria-controls="v-tabs-income" aria-selected="false">
           <i class="fas fa-chart-line"></i> Income Reports</a>
       </div>
+
     </div>
 
+
+    <!--Dashboard-->
     <div class="col-10 p-3">
+
       <div class="container-fluid">
+
         <div class="tab-content" id="v-tabs-tabContent">
+
           <!--Dashboard Details-->
-          <div class="tab-pane fade show active" id="v-tabs-dash" role="tabpanel" aria-labelledby="v-tabs-dash-tab">
+          <div class="tab-pane fade show active" id="v-tabs-dash" role="tabpanel"
+               aria-labelledby="v-tabs-dash-tab">
+
             <div class="row text-center"><h1 class="h1 display-5">DashBoard</h1></div>
+
           </div>
+
           <!--Car Details-->
           <div class="tab-pane fade" id="v-tabs-car" role="tabpanel" aria-labelledby="v-tabs-car-tab">
-          </div>
-          <!--Customer Details-->
-          <div class="tab-pane fade" id="v-tabs-customer" role="tabpanel" aria-labelledby="v-tabs-customer-tab">
-            <div class="row text-center"><h1 class="h1 display-5">Customer Details</h1></div>
-            <!--Customer Details Content-->
+            <div class="row ms-0 me-0 text-center"><h1 class="h1 display-5">Car Details</h1></div>
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-3 bg-info text-white">Customer Details</h3>
+              <h3 class="h3  p-2 m-1  text-white"  style="background-color: #0b093e">  Car Details</h3>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtRegNo" class="form-label mb-0">Registration No</label>
+                  <input type="text" class="form-control" id="txtRegNo" name="regNo"
+                         placeholder="CAU-1872">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtBrand" class="form-label mb-0">Brand</label>
+                  <input type="text" class="form-control" id="txtBrand" name="brand"
+                         placeholder="Toyota">
+                </div>
+              </div>
+              <div class="col-2">
+                <label for="cmbtype" class="form-label mb-0">Type</label>
+                <select class="form-select" aria-label="Default select example" id="cmbtype"
+                        name="type">
+                  <option selected>- Select Car Type -</option>
+                  <option value="1">General</option>
+                  <option value="2">Premium</option>
+                  <option value="3">Luxury</option>
+                </select>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtNoOfPassengers" class="form-label mb-0">No Of Passengers</label>
+                  <input type="text" class="form-control" id="txtNoOfPassengers"
+                         name="noOfPassengers">
+                </div>
+              </div>
+              <div class="col-2">
+                <label for="cmbTransmissionType" class="form-label mb-0">Transmission</label>
+                <select class="form-select" aria-label="Default select example" id="cmbTransmissionType"
+                        name="transmission">
+                  <option selected>- Select Transmission -</option>
+                  <option value="1">Manual</option>
+                  <option value="2">Auto</option>
+                </select>
+              </div>
+              <div class="col-2">
+                <label for="cmbfuel" class="form-label mb-0">Fuel</label>
+                <select class="form-select" aria-label="Default select example" id="cmbfuel"
+                        name="fuel">
+                  <option selected>- Select Fuel Type -</option>
+                  <option value="1">Petrol</option>
+                  <option value="2">Diesel</option>
+                </select>
+              </div>
+
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="cmbColor" class="form-label mb-0">Color</label>
+                  <select class="form-select" aria-label="Default select example" id="cmbColor"
+                          name="color">
+                    <option selected>- Select Color -</option>
+                    <option value="1">Black</option>
+                    <option value="2">White</option>
+                    <option value="3">Red</option>
+                    <option value="4">Blue</option>
+                    <option value="5">Orange</option>
+                    <option value="6">Silver</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="imgFrontView" class="form-label mb-0">Front View Image</label>
+                  <input type="file" class="form-control" id="imgFrontView" name="imgFrontView">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="imgBackView" class="form-label mb-0">Back View Image</label>
+                  <input type="file" class="form-control" id="imgBackView" name="imgBackView">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="imgSideView" class="form-label mb-0">Side View Image</label>
+                  <input type="file" class="form-control" id="imgSideView" name="imgSideView">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="imgInteriorView" class="form-label mb-0">Interior View Image</label>
+                  <input type="file" class="form-control" id="imgInteriorView" name="imgInteriorView">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtDailyRate" class="form-label mb-0">Daily Rate (Rs.)</label>
+                  <input type="text" class="form-control" id="txtDailyRate" name="dailyRate">
+                </div>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtMonthlyRate" class="form-label mb-0">Monthly Rate (Rs.)</label>
+                  <input type="text" class="form-control" id="txtMonthlyRate" name="monthlyRate">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtFreeKmForPrice" class="form-label mb-0">Free Mileage For The Price
+                    (Km)</label>
+                  <input type="text" class="form-control" id="txtFreeKmForPrice"
+                         name="freeKmForPrice">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtFreeKmForDuration" class="form-label mb-0">Free Km For The Duration
+                    (Km)</label>
+                  <input type="text" class="form-control" id="txtFreeKmForDuration"
+                         name="freeKmForDuration">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtLossDamageWaiver" class="form-label mb-0">Loss Damage Waiver
+                    (Rs.)</label>
+                  <input type="text" class="form-control" id="txtLossDamageWaiver"
+                         name="lossDamageWaiver">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtPriceForExtraKm" class="form-label mb-0">Price For Extra Km
+                    (Rs.)</label>
+                  <input type="text" class="form-control" id="txtPriceForExtraKm"
+                         name="priceForExtraKm">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCompleteKm" class="form-label mb-0">Complete Kilometers (Km)</label>
+                  <input type="text" class="form-control" id="txtCompleteKm" name="completeKm">
+                </div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-success mt-3 " id="saveCar">Save</button>
+                <button type="button" class="btn btn-danger mt-3" id="delCar">Delete</button>
+                <button type="button" class="btn btn-warning mt-3" id="updateCar">Update</button>
+                <button type="button" class="btn btn-secondary mt-3" id="clearCar">Clear</button>
+              </div>
+            </div>
+
+            <div class="row ml-0 mr-0 mt-2 align-content-end ">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                  <input type="text" id="searchCar" class="form-control" placeholder="Search Reg No"/>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnSearchCar">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+
+            <div class="row overflow-scroll mt-3" style="height: 60vh">
+              <table class="table table-hover table-bordered table-striped" id="carTbl">
+                <thead class="bg-primary">
+                <tr class="text-white" >
+                  <th>Reg No</th>
+                  <th>Brand</th>
+                  <th>Type</th>
+                  <th>No Of Passengers</th>
+                  <th>Transmission</th>
+                  <th>Fuel</th>
+                  <th>Color</th>
+                  <th>Daily Rate</th>
+                  <th>Monthly Rate</th>
+                  <th>Free Km For Price</th>
+                  <th>Free Km For Duration</th>
+                  <th>Loss Damage Waiver</th>
+                  <th>Price For Extra Km</th>
+                  <th>Complete Km</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="carTable">
+
+                </tbody>
+              </table>
+
+            </div>
+          </div>
+
+          <!--Customer Details-->
+          <div class="tab-pane fade" id="v-tabs-customer" role="tabpanel"
+               aria-labelledby="v-tabs-customer-tab">
+
+            <div class="row text-center"><h1 class="h1 display-5">Customer Details</h1></div>
+
+            <!--Customer Details Content-->
+            <div class="row ms-0 me-0" >
+              <h3 class="h3  p-2   text-white" style="background-color: #0b093e">Customer Details</h3>
               <div class="col-2">
                 <div class="mb-3">
                   <label for="txtCustomerId" class="form-label mb-0">Customer ID</label>
@@ -155,6 +366,7 @@
                 </div>
               </div>
             </div>
+
             <!--Second Row-->
             <div class="row ms-0 me-0">
               <div class="col-2">
@@ -168,16 +380,19 @@
               <div class="col-2">
                 <label class="form-label mb-0">NIC Front View</label>
                 <div class="mb-3" id="divNICFrontView" style="height: 13vh; border: #00e5ff 2px solid">
+
                 </div>
               </div>
               <div class="col-2">
                 <label class="form-label mb-0">NIC Back View</label>
                 <div class="mb-3" id="divNICBackView" style="height: 13vh; border: #00e5ff 2px solid">
+
                 </div>
               </div>
               <div class="col-2">
                 <label class="form-label mb-0">Licence Img</label>
                 <div class="mb-3" id="divLicenceImg" style="height: 13vh; border: #00e5ff 2px solid">
+
                 </div>
               </div>
               <div class="col-4">
@@ -187,13 +402,76 @@
                 <button type="button" class="btn btn-secondary mt-3" id="btnClearFields">Clear</button>
               </div>
             </div>
+
+            <!--Pending Customers Table-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2  text-white" style="background-color: #0b093e">Pending Customers</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 20vh">
+              <table class="table table-hover table-bordered table-striped " id="pendingCustomerTbl">
+                <thead class="bg-primary">
+                <tr class="text-white">
+                  <th>Customer ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact No</th>
+                  <th>Email</th>
+                  <th>NIC No</th>
+                  <th>Licence No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblPendingCustomers">
+
+                </tbody>
+              </table>
+            </div>
+
+            <!--Registered Customers Table-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2  text-white" style="background-color: #0b093e">Registered Customers</h3>
+            </div>
+            <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                  <input type="text" id="searchCustomer" class="form-control" placeholder="Search"/>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnSearchCustomer">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 40vh">
+              <table class="table table-hover table-bordered table-striped" id="registeredCustomerTbl">
+                <thead class="bg-primary">
+                <tr class="text-white">
+                  <th>Customer ID</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact No</th>
+                  <th>Email</th>
+                  <th>NIC No</th>
+                  <th>Licence No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblRegisteredCustomers">
+
+                </tbody>
+              </table>
+            </div>
+
+
           </div>
+
           <!--Driver Details-->
-          <div class="tab-pane fade" id="v-tabs-driver"  role="tabpanel" aria-labelledby="v-tabs-customer-tab">
+          <div class="tab-pane fade" id="v-tabs-driver" role="tabpanel" aria-labelledby="v-tabs-customer-tab">
+
             <div class="row text-center"><h1 class="h1 display-5">Driver Details</h1></div>
+
             <!--Driver Details-->
             <div class="row ms-0 me-0">
-              <h3 class="h3  p-2 m-3 bg-info text-white">Driver Details</h3>
+              <h3 class="h3  p-2   text-white" style="background-color: #0b093e">Driver Details</h3>
               <div class="col-3">
                 <div class="mb-3">
                   <label for="txtLicenceNo" class="form-label mb-0">Licence No</label>
@@ -212,7 +490,7 @@
                 <div class="mb-3">
                   <label for="txtDriverAddress" class="form-label mb-0">Address</label>
                   <input type="text" class="form-control" id="txtDriverAddress" name="driverAddress"
-                         placeholder="Eg:- Galle Road,Ambalangoda">
+                         placeholder="Eg:- Ambalangoda">
                 </div>
               </div>
               <div class="col-3">
@@ -223,6 +501,7 @@
                 </div>
               </div>
             </div>
+
             <!--Second Row-->
             <div class="row ms-0 me-0">
               <div class="col-4">
@@ -247,6 +526,7 @@
                 </div>
               </div>
             </div>
+
             <div class="row m-3">
               <div class="d-grid gap-2 d-md-flex justify-content-md-center">
                 <button type="button" class="btn btn-success mt-3 " id="btnSaveDriver">Save</button>
@@ -255,30 +535,568 @@
                 <button type="button" class="btn btn-secondary mt-3" id="btnClearDriver">Clear</button>
               </div>
             </div>
+
+            <!--Available Drivers Table-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 text-white" style="background-color: #0b093e">Available Drivers</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 30vh">
+              <table class="table table-hover table-bordered table-striped" id="availableDriversTbl">
+                <thead class="bg-primary">
+                <tr class="text-white">
+                  <th>Licence No</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact No</th>
+                  <th>NIC No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblAvailableDrivers">
+                </tbody>
+              </table>
+            </div>
+
+            <!--Non Available Drivers Table-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2  text-white" style="background-color: #0b093e">Non Available Drivers</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 20vh">
+              <table class="table table-hover table-bordered table-striped" id="NonAvailableDriversTbl">
+                <thead class="bg-primary">
+                <tr class="text-white">
+                  <th>Licence No</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact No</th>
+                  <th>NIC No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblNonAvailableDrivers">
+
+                </tbody>
+              </table>
+            </div>
+
+            <!--Registered Drivers table-->
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 text-white" style="background-color: #0b093e">Registered Drivers</h3>
+            </div>
+            <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                  <input type="text" id="searchDriver" class="form-control" placeholder="Search"/>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnSearchDriver">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 40vh">
+              <table class="table table-hover table-bordered table-striped" id="registeredDriversTbl">
+                <thead class="bg-primary">
+                <tr class="text-white">
+                  <th>Licence No</th>
+                  <th>Name</th>
+                  <th>Address</th>
+                  <th>Contact No</th>
+                  <th>NIC No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblRegisteredDrivers">
+
+                </tbody>
+              </table>
+            </div>
+
           </div>
+
+
           <!--Car Rentals-->
           <div class="tab-pane fade" id="v-tabs-rentals" role="tabpanel" aria-labelledby="v-tabs-rentals-tab">
+            <div class="row text-center" id=v-tabs-Car-Rental"><h1 class="h1 display-5" >Car Rentals</h1></div>
+            <div class="bg-light row overflow-scroll" style="height: 75vh">
+              <table class="table table-hover table-bordered table-striped" id="carRentalsTbl">
+                <thead style="background-color: #0b093e">
+                <tr class="text-white">
+                  <th>Rent ID</th>
+                  <th>Date</th>
+                  <th>Pick Up Date</th>
+                  <th>Return Date</th>
+                  <th>Registration No</th>
+                  <th>Customer ID</th>
+                  <th>Licence No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblCarRentals">
+
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <!--Payment Details-->
-          <div class="tab-pane fade" id="v-tabs-payment" role="tabpanel" aria-labelledby="v-tabs-payment-tab">
+          <div class="tab-pane fade" id="v-tabs-payment" role="tabpanel"
+               aria-labelledby="v-tabs-payment-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Payment Details</h1></div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <div>
+                  <label for="pickFromDate" class="form-label">From</label>
+                  <input type="date" id="pickFromDate" class="form-control" name="fromDate"
+                         placeholder="Start Date">
+                </div>
+                <div>
+                  <label for="pickFromDate" class="form-label">To</label>
+                  <input type="date" id="pickToDate" class="form-control" name="toDate"
+                         placeholder="End Date">
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="btnSearchPayment">Search</button>
+                <button type="button" class="btn btn-warning mt-3 ms-2" id="btnClearDates">Clear
+                </button>
+              </div>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 65vh">
+              <table class="table table-hover table-bordered table-striped" id="paymentsTbl">
+                <thead style="background-color: #0b093e">
+                <tr class="text-white">
+                  <th>Payment ID</th>
+                  <th>Date</th>
+                  <th>Amount (Rs.)</th>
+                  <th>Rent ID</th>
+                  <th>Customer ID</th>
+                </tr>
+                </thead>
+                <tbody id="tblPayments">
+
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <!--Rental Requests-->
-          <div class="tab-pane fade" id="v-tabs-request" role="tabpanel" aria-labelledby="v-tabs-request-tab">
+          <div class="tab-pane fade" id="v-tabs-request" role="tabpanel"
+               aria-labelledby="v-tabs-request-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Rental Requests</h1></div>
+            <div class="row ms-0 me-0">
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtRentId" class="form-label mb-0">Rent ID</label>
+                  <input type="text" class="form-control" id="txtRentId"
+                         name="rentId" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtDate" class="form-label mb-0">Date</label>
+                  <input type="text" class="form-control" id="txtDate"
+                         name="date" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtPickupDate" class="form-label mb-0">Pickup Date</label>
+                  <input type="text" class="form-control" id="txtPickupDate"
+                         name="pickupDate" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtReturnDate" class="form-label mb-0">Return Date</label>
+                  <input type="text" class="form-control" id="txtReturnDate"
+                         name="returnDate" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtCarRegistrationNo" class="form-label mb-0">Car Registration
+                    No</label>
+                  <input type="text" class="form-control" id="txtCarRegistrationNo"
+                         name="regNo" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtCusId" class="form-label mb-0">Customer ID</label>
+                  <input type="text" class="form-control" id="txtCusId"
+                         name="cusId" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtDLicenceNo" class="form-label mb-0">Driver Licence No</label>
+                  <input type="text" class="form-control" id="txtDLicenceNo"
+                         name="dLicenceNo" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtRentalStatus" class="form-label mb-0">Status</label>
+                  <input type="text" class="form-control" id="txtRentalStatus"
+                         name="rentalStatus" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <button type="button" class="btn btn-success mt-3 " id="btnRentalAccept">Accept</button>
+                <button type="button" class="btn btn-danger mt-3" id="btnRentalReject">Reject</button>
+                <button type="button" class="btn btn-secondary mt-3" id="btnClearRental">Clear</button>
+              </div>
+            </div>
+            <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                  <input type="text" id="searchRentalRequest" class="form-control"
+                         placeholder="Search"/>
+                </div>
+                <button type="button" class="btn btn-primary" id="btnSearchRentalRequest">
+                  <i class="fas fa-search"></i>
+                </button>
+              </div>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 45vh">
+              <table class="table table-hover table-bordered table-striped" id="carRentalRequestTbl">
+                <thead style="background-color: #0b093e">
+                <tr class="text-white">
+                  <th>Rent ID</th>
+                  <th>Date</th>
+                  <th>Pickup Date</th>
+                  <th>Return Date</th>
+                  <th>Car Registration No</th>
+                  <th>Customer ID</th>
+                  <th>Driver Licence No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tblCarRentalRequests">
+
+                </tbody>
+              </table>
+            </div>
+
           </div>
+
           <!--Rental Return-->
           <div class="tab-pane fade" id="v-tabs-rentalreturns" role="tabpanel"
                aria-labelledby="v-tabs-rentalreturns-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Rental Returns</h1></div>
+            <hr>
+            <div class="row ml-0 mr-0 mt-2 mb-2 align-content-end ">
+              <div class="input-group d-flex align-items-center justify-content-center">
+                <div class="col-2">
+                  <input type="text" class="form-control" id="txtReturnId" name="returnId" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtReturnPaymentId" class="form-label mb-0">Payment ID</label>
+                  <input type="text" class="form-control" id="txtReturnPaymentId"
+                         name="rentalPaymentId" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtSearchRentId" class="form-label mb-0">Rent ID</label>
+                  <input type="text" class="form-control" id="txtSearchRentId"
+                         name="searchRentId">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtTotalPaidAmount" class="form-label mb-0">Total Paid Amount
+                    (Rs.)</label>
+                  <input type="text" class="form-control" id="txtTotalPaidAmount"
+                         name="totalPaidAmount" disabled>
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="mb-3">
+                  <label for="txtTodayDate" class="form-label mb-0">Today</label>
+                  <input type="text" class="form-control" id="txtTodayDate"
+                         name="todayDate" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtPickDate" class="form-label mb-0">Pickup Date</label>
+                  <input type="text" class="form-control" id="txtPickDate"
+                         name="pickDate" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtRDate" class="form-label mb-0">Return Date</label>
+                  <input type="text" class="form-control" id="txtRDate"
+                         name="rDate" disabled>
+                </div>
+                <input type="text" class="form-control" id="txtRentalCustId"
+                       name="custId" hidden>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtRentForUseDates" class="form-label mb-0">Rent For Using Dates</label>
+                  <input type="text" class="form-control" id="txtRentForUseDates"
+                         name="rentForUseDates" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtDamageCost" class="form-label mb-0">Damage Cost (Rs.)</label>
+                  <input type="text" class="form-control" id="txtDamageCost"
+                         name="damageCost" value="0.0">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtTotalKm" class="form-label mb-0">Total Km</label>
+                  <input type="text" class="form-control" id="txtTotalKm"
+                         name="totalKm" value="0.0">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtTotalPriceForExtraKm" class="form-label mb-0">Total Price For Extra
+                    Km</label>
+                  <input type="text" class="form-control" id="txtTotalPriceForExtraKm"
+                         name="totalPriceForExtraKm" value="0.0" disabled>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row ms-0 me-0">
+              <div class="col-3">
+                <div class="form-floating mb-3">
+                  <button type="button" class="btn btn-warning mt-3 " id="btnCalPayment">Calculate
+                    Payment
+                  </button>
+
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtTotalPayments" class="form-label mb-0">Total Payments (Rs.)</label>
+                  <input type="text" class="form-control text-primary fs-3" id="txtTotalPayments"
+                         name="totalPayments" disabled>
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtBalance" class="form-label mb-0">Balance (Rs.)</label>
+                  <input type="text" class="form-control text-danger fs-3" id="txtBalance"
+                         name="balance" disabled>
+                </div>
+              </div>
+            </div>
+            <hr>
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-3">
+                <button type="button" class="btn btn-success" id="btnSubmitPayment">Submit Payment
+                </button>
+                <button type="button" class="btn btn-warning" id="btnClearPayment">Clear</button>
+              </div>
+            </div>
+            <hr>
+            <div class="bg-light row overflow-scroll" style="height: 40vh">
+              <table class="table table-hover table-bordered table-striped" id="carRentaltbl">
+                <thead style="background-color: #0b093e">
+                <tr class="text-white">
+                  <th>Rent ID</th>
+                  <th>Date</th>
+                  <th>Pickup Date</th>
+                  <th>Return Date</th>
+                  <th>Car Registration No</th>
+                  <th>Customer ID</th>
+                  <th>Driver Licence No</th>
+                  <th>Status</th>
+                </tr>
+                </thead>
+                <tbody id="tableCarRental">
+
+                </tbody>
+              </table>
+            </div>
           </div>
+
           <!--Maintenance-->
-          <div class="tab-pane fade" id="v-tabs-maintenance" role="tabpanel" aria-labelledby="v-tabs-maintenance-tab">
+          <div class="tab-pane fade" id="v-tabs-maintenance" role="tabpanel"
+               aria-labelledby="v-tabs-maintenance-tab">
+            <div class="row text-center"><h1 class="h1 display-5">Maintenance</h1></div>
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchRegistrationNo" class="form-label mb-0">Registration No</label>
+                  <input type="text" class="form-control" id="txtSearchRegistrationNo"
+                         name="searchRegistrationNo">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchBrand" class="form-label mb-0">Brand</label>
+                  <input type="text" class="form-control" id="txtSearchBrand"
+                         name="searchBrand" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchType" class="form-label mb-0">Type</label>
+                  <input type="text" class="form-control" id="txtSearchType"
+                         name="searchType" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchTransmission" class="form-label mb-0">Transmission</label>
+                  <input type="text" class="form-control" id="txtSearchTransmission"
+                         name="searchTransmission" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchColor" class="form-label mb-0">Color</label>
+                  <input type="text" class="form-control" id="txtSearchColor"
+                         name="searchColor" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtSearchStatus" class="form-label mb-0">Status</label>
+                  <input type="text" class="form-control" id="txtSearchStatus"
+                         name="searchStatus" disabled>
+                </div>
+              </div>
+            </div>
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-4 d-flex align-items-center justify-content-evenly">
+                <button type="button" class="btn btn-success" id="btnAddToMaintenance">Add To
+                  Maintenance
+                </button>
+                <button type="button" class="btn btn-warning" id="btnClearMaintenance">Clear</button>
+              </div>
+            </div>
+            <hr>
+            <div class="row ms-0 me-0">
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtMaintenanceId" class="form-label mb-0">Maintenance ID</label>
+                  <input type="text" class="form-control" id="txtMaintenanceId"
+                         name="maintenanceId" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCarRegNo" class="form-label mb-0">Registration No</label>
+                  <input type="text" class="form-control" id="txtCarRegNo"
+                         name="carRegNo">
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtToday" class="form-label mb-0">Date</label>
+                  <input type="text" class="form-control" id="txtToday"
+                         name="todayD" disabled>
+                </div>
+              </div>
+              <div class="col-2">
+                <div class="mb-3">
+                  <label for="txtCost" class="form-label mb-0">Cost (Rs.)</label>
+                  <input type="text" class="form-control" id="txtCost"
+                         name="maintenanceCost">
+                </div>
+              </div>
+              <div class="col-4">
+                <div class="mb-3">
+                  <label for="txtMaintenanceDetails" class="form-label mb-0">Details</label>
+                  <input type="text" class="form-control" id="txtMaintenanceDetails"
+                         name="maintenanceDetails">
+                </div>
+              </div>
+              <div class="row d-flex align-items-center justify-content-center">
+                <div class="col-3 d-flex align-items-center justify-content-evenly">
+                  <button type="button" class="btn btn-success" id="btnMaintenancePaid">Paid</button>
+                  <button type="button" class="btn btn-warning" id="btnClearPaid">Clear</button>
+                </div>
+              </div>
+              <div class="row ms-0 me-0">
+                <h3 class="h3  p-2 mt-3 mb-3  text-white p-0" style="background-color: #0b093e">Under Maintenance Cars</h3>
+              </div>
+              <div class="bg-light row overflow-scroll m-0" style="height: 40vh">
+                <table class="table table-hover table-bordered table-striped"
+                       id="carUnderMaintenanceTbl">
+                  <thead class="bg-primary">
+                  <tr class="text-white">
+                    <th>Reg No</th>
+                    <th>Brand</th>
+                    <th>Type</th>
+                    <th>No Of Passengers</th>
+                    <th>Transmission</th>
+                    <th>Fuel</th>
+                    <th>Color</th>
+                    <th>Daily Rate</th>
+                    <th>Monthly Rate</th>
+                    <th>Free Km For Price</th>
+                    <th>Free Km For Duration</th>
+                    <th>Loss Damage Waiver</th>
+                    <th>Price For Extra Km</th>
+                    <th>Complete Km</th>
+                    <th>Status</th>
+                  </tr>
+                  </thead>
+                  <tbody id="tblCarUnderMaintenance">
+
+                  </tbody>
+                </table>
+              </div>
+              <div class="row ms-0 me-0">
+                <h3 class="h3  p-2 mt-3 mb-3  text-white" style="background-color: #0b093e">All Maintenances</h3>
+              </div>
+              <div class="bg-light row overflow-scroll m-0" style="height: 30vh">
+                <table class="table table-hover table-bordered table-striped" id="allMaintenancesTbl">
+                  <thead class="bg-primary">
+                  <tr class="text-white">
+                    <th>Maintenance ID</th>
+                    <th>Registration No</th>
+                    <th>Date</th>
+                    <th>Details</th>
+                    <th>Cost</th>
+                  </tr>
+                  </thead>
+                  <tbody id="tblAllMaintenances">
+
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
+
+
           <!--Income Reports-->
           <div class="tab-pane fade" id="v-tabs-income" role="tabpanel" aria-labelledby="v-tabs-income-tab">
+
+            <div class="row text-center"><h1 class="h1 display-5">Income Reports</h1></div>
+
           </div>
+
+
+
+
         </div>
+
       </div>
+
     </div>
+
   </div>
+
 </main>
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <script src="assets/bootstrap/js/jquery-3.6.1.min.js"></script>

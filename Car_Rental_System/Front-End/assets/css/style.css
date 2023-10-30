@@ -96,16 +96,22 @@ html body{
 #v-tabs-profile-tab, #v-tabs-setting-tab, #v-tabs-rentalreturns-tab, #v-tabs-maintenance-tab, #v-tabs-income-tab {
     padding: 25px;
     font-size: 20px;
+    font-weight: bold;
     text-shadow: #c7c7c7 5px 5px 5px;
 
 }
 
-#v-tabs-dash > div > h1, #v-tabs-car > div > h1, #v-tabs-customer > div > h1, #v-tabs-driver > div > h1, #v-tabs-order > div > h1, #v-tabs-payment > div > h1, #v-tabs-request > div > h1,
-#v-tabs-profile > div > h1, #v-tabs-setting > div > h1, #v-tabs-bookingreturn > div > h1, #v-tabs-maintaince > div > h1 {
-    text-shadow: #c0c0c0 5px 5px 5px;
+#v-tabs-dash > div > h1, #v-tabs-car > div > h1, #v-tabs-customer > div > h1, #v-tabs-driver > div > h1, #v-tabs-order > div > h1,#v-tabs-payment-tab div>h1,#v-tabs-payment div>h1, #v-tabs-payment > div > h1, #v-tabs-request > div > h1,#v-tabs-maintaince div>h1
+#v-tabs-profile > div > h1, #v-tabs-setting > div > h1, #v-tabs-bookingreturn > div > h1, #v-tabs-maintaince > div > h1, #v-tabs-income div>h1,#v-tabs-profile div>h1,#v-tabs-setting div>h1,#v-tabs-bookingreturn div>h1, #v-tabs-maintaince div,h1{
+    text-shadow: #777bff 5px 5px 5px;
+    color: black;
+
+
+
 }
 
 #leftDash {
     padding-right: 0;
     border-right: 3px solid #777bff;
+    color: #0b093e;
 }
