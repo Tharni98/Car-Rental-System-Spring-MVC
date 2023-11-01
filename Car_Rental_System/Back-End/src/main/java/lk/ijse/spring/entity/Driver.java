@@ -5,8 +5,12 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * author - Tharani
@@ -29,4 +33,7 @@ public class Driver {
     private String username;
     private String password;
     private boolean availability;
+
+    @OneToMany(mappedBy = "driver",cascade = CascadeType.ALL)
+    private List<CarRent> rentals = new ArrayList<>();
 }
