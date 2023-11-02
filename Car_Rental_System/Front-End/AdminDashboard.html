@@ -114,6 +114,100 @@
 
             <div class="row text-center"><h1 class="h1 display-5">DashBoard</h1></div>
 
+            <div class="row p-3">
+              <div class="col-lg-3 col-6 overflow-hidden " id="c1">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-user"></i>
+                      REGISTERED CUSTOMERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countCust">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c2">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-list"></i>
+                      TODAY BOOKINGS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countBookings">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c3">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-car"></i>
+                      AVAILABLE CARS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countAvailableCars">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c4">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="fas fa-car"></i>
+                      RESERVED CARS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countReservedCars">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row p-3">
+              <div class="col-lg-6 col-6 overflow-hidden " id="c5">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="far fa-user"></i>
+                      AVAILABLE DRIVERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center"
+                        id="countAvailableDrivers">00</h6>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-3 col-6 overflow-hidden " id="c6">
+                <div class="card " style="width: 18rem;">
+                  <div class="card-body">
+                    <h6 class="card-title text-secondary text-center registerCustomerTitle"><i
+                            class="far fa-user"></i>
+                      OCCUPIED DRIVERS</h6>
+                    <h6 class="card-subtitle  display-6 mb-2 text-center" id="countOccupiedDrivers">
+                      00</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row mt-1 justify-content-around">
+              <div class="col-12 p-3 mt-3">
+                <h3 class="text-center p-2">Today Bookings</h3>
+                <div class="bg-light row overflow-scroll" style="height: 40vh">
+                  <table class="table table-hover table-bordered table-striped" id="bookingTbl">
+                    <thead class="bg-primary">
+                    <tr class="text-white">
+                      <th>Rent ID</th>
+                      <th>Date</th>
+                      <th>Pick Up Date</th>
+                      <th>Return Date</th>
+                      <th>Customer ID</th>
+                      <th>Car Registration No</th>
+                      <th>Driver Licence No</th>
+                      <th>Status</th>
+                    </tr>
+                    </thead>
+                    <tbody id="todayBookingTable">
+
+                    </tbody>
+                  </table>
+
+                </div>
+              </div>
+            </div>
           </div>
 
           <!--Car Details-->
@@ -1083,6 +1177,83 @@
           <div class="tab-pane fade" id="v-tabs-income" role="tabpanel" aria-labelledby="v-tabs-income-tab">
 
             <div class="row text-center"><h1 class="h1 display-5">Income Reports</h1></div>
+            <div class="row m-3">
+              <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                <div>
+                  <label for="incomeFromDate" class="form-label">From</label>
+                  <input type="date" id="incomeFromDate" class="form-control" name="incomeFromDate"
+                         placeholder="Start Date">
+                </div>
+                <div>
+                  <label for="incomeToDate" class="form-label">To</label>
+                  <input type="date" id="incomeToDate" class="form-control" name="incomeToDate"
+                         placeholder="End Date">
+                </div>
+                <button type="button" class="btn btn-primary mt-3" id="btnSearchIncome">Search</button>
+                <button type="button" class="btn btn-warning mt-3" id="btnClearIncome">Clear</button>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 text-dark text-center">Payments</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 40vh">
+              <table class="table table-hover table-bordered table-striped" id="paymentsInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                  <th>Payment ID</th>
+                  <th>Date</th>
+                  <th>Amount</th>
+                  <th>Rent ID</th>
+                  <th>Customer ID</th>
+                </tr>
+                </thead>
+                <tbody id="tblPaymentsInDateRange">
+
+                </tbody>
+              </table>
+            </div>
+            <div class="row ms-0 me-0">
+              <h3 class="h3  p-2 m-3 text-dark text-center">Maintenances</h3>
+            </div>
+            <div class="bg-light row overflow-scroll" style="height: 30vh">
+              <table class="table table-hover table-bordered table-striped"
+                     id="maintenancesInDateRangeTbl">
+                <thead class="bg-dark text-white">
+                <tr>
+                  <th>Maintenance ID</th>
+                  <th>Date</th>
+                  <th>Cost</th>
+                  <th>Details</th>
+                  <th>Registration No</th>
+                </tr>
+                </thead>
+                <tbody id="tblMaintenancesInDateRange">
+
+                </tbody>
+              </table>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-8">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-dark">Total Payments - </label>
+                <label class="h4 text-dark">Total Maintenances Cost</label>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-6">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-danger" id="lblTotalPayments"></label>
+                <label class="h4 text-danger"> - </label>
+                <label class="h4 text-danger" id="lblTotalMaintenanceCost"></label>
+              </div>
+            </div>
+            <div class="row ms-0 me-0">
+              <div class="col-6">
+                <label class="h4 text-primary">Total Income = </label>
+                <label class="h4 text-danger">Rs. </label>
+                <label class="h4 text-danger" id="lblTotalIncome"></label>
+              </div>
+            </div>
 
           </div>
 
