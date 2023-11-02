@@ -25,13 +25,13 @@ public class AdminController {
         return new ResponseUtil(200, "Ok", service.getAllAdmins());
     }
 
-    @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
-    public ResponseUtil saveAdmin(@RequestBody AdminDTO dto) {
-        System.out.println(dto.toString());
-        service.saveAdmin(dto);
-        return new ResponseUtil(200, "Saved", null);
-    }
+//    @ResponseStatus(HttpStatus.CREATED)
+//    @PostMapping
+//    public ResponseUtil saveAdmin(@RequestBody AdminDTO dto) {
+//        System.out.println(dto.toString());
+//        service.saveAdmin(dto);
+//        return new ResponseUtil(200, "Saved", null);
+//    }
 
     @PutMapping
     public ResponseUtil updateAdmin(@RequestBody AdminDTO dto) {
