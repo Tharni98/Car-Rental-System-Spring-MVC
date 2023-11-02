@@ -115,3 +115,49 @@ html body{
     border-right: 3px solid #777bff;
     color: #0b093e;
 }
+
+#c1, #c2, #c3, #c4, #c5, #c6 {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+#c1 > .card, #c2 > .card, #c3 > .card, #c4 > .card, #c5 > .card, #c6 > .card {
+    box-shadow: #E0E0E0 0px 2px 10px;
+}
+#c1 > .card {
+    border-bottom: 5px #0b093e solid;
+}
+#c2 > .card {
+    border-bottom: 5px #00B74A solid;
+}
+#c3 > .card {
+    border-bottom: 5px #FFA900 solid;
+}
+#c4 > .card {
+    border-bottom: 5px #1266F1 solid;
+}
+#c5 > .card {
+    border-bottom: 5px #FA011E solid;
+}
+#c6 > .card {
+    border-bottom: 5px #01FADD solid;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
